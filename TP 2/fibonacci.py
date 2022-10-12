@@ -39,5 +39,3 @@ def fibo_memo(n: int) -> int:
 
 
 print(fibo_memo(7000))
-
-

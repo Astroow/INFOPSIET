@@ -19,6 +19,3 @@ def rendu_glouton(S: int, M: list) -> dict:
         else:
             R[s] = 1
     return R
-
-
-print(rendu_glouton(747, EURO))
