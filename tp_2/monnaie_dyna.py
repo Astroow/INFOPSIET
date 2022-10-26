@@ -52,7 +52,6 @@ def rendu_dyn_memo(S: int, M: list) -> int:
     return i
   j = M[len(M)-1]
   if (i, j) in MEMO:
-    print("°", i)
     return MEMO[(i, j)]
   if j <= i:
     MEMO[(i, j)] = min(1 + rendu_dyn_memo(i-j, M), rendu_dyn_memo(i, M[:len(M)-1]))
