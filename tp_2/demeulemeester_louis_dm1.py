@@ -47,7 +47,7 @@ def rendu_glouton_rec(S: int, M: list) -> list:
 # 4|4 2 1
 # 5|5 3 2
 # 6|6 2 2
-# La soluion optimale donnée par la programmation dynamique est [3, 3].
+# La solution optimale donnée par la programmation dynamique est [3, 3].
 
 # 3.
 
