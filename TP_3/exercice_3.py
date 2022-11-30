@@ -44,3 +44,4 @@ def edition_memo(s1: str, s2: str) -> int:
 # 3.
 
 def edition_memo_reconst(s1: str, s2: str) -> (int, [int]):
+    pass
