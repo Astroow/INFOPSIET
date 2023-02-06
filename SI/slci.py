@@ -30,3 +30,33 @@ def est_dans_bande(v: float, vf: float) -> bool:
     return vf*0.95 <= v <= vf*1.05
 
 # 5
+def abaque(step: float):
+    z = 0.01
+
+    Z = []
+    TRW0 = []
+
+    while z < 50:
+        if 0.01 <= z <= 0.6:
+            trw0 = 400
+            while est_dans_bande(s(trw0, z), 1):
+                trw0 -= 0.01
+        elif 0.6 <= z <= 1:
+            trw0 = 7
+            while est_dans_bande(s(trw0, z), 1):
+                trw0 -= 0.01
+        else:
+            trw0 = TRW0[-1]
+            while not est_dans_bande(s(trw0, z), 1):
+                trw0 += 0.01
+        Z.append(z)
+        TRW0.append(trw0)
+        z += step
+
+    plt.plot(Z, TRW0, label="trw0")
+    plt.legend(loc="upper right")
+    plt.grid()
+    plt.loglog()
+    plt.show()
+
+# abaque(0.01)
